@@ -1,0 +1,71 @@
+:root {
+    --primary: #6366f1;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --glass: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.weather-app {
+    background: var(--glass);
+    backdrop-filter: blur(10px); /* Эффект матового стекла */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.search__input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.search__btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search__btn:hover {
+    filter: brightness(1.2);
+}
+
+.weather-info--hidden, .weather-error--hidden {
+    display: none;
+}
+
+.weather-info__temp {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.weather-info__icon {
+    width: 100px;
+    height: 100px;
+}
