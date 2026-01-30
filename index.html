@@ -11,19 +11,34 @@
         <h1 class="weather-app__title">MellowWeather</h1>
         
         <div class="search">
-            <input type="text" class="search__input" placeholder="Введите город (например, Москва)...">
-            <button class="search__btn">Найти</button>
+            <input type="text" class="search__input" placeholder="Введите город..." value="Москва">
+            <button class="search__btn">🔍</button>
         </div>
 
         <div class="weather-info weather-info--hidden">
-            <h2 class="weather-info__city">Город</h2>
-            <div class="weather-info__temp">--°C</div>
-            <img src="" alt="Погода" class="weather-info__icon">
-            <p class="weather-info__desc">Описание</p>
+            <h2 class="weather-info__city">--</h2>
+            
+            <div class="weather-info__main">
+                <img src="" alt="icon" class="weather-info__icon">
+                <div class="weather-info__temp">--°C</div>
+            </div>
+            
+            <p class="weather-info__desc">--</p>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-item__label">💨 Ветер:</span>
+                    <span id="wind-speed" class="detail-item__value">--</span> м/с
+                </div>
+                <div class="detail-item">
+                    <span class="detail-item__label">🌅 Завтра:</span>
+                    <span id="next-day-temp" class="detail-item__value">--</span>°C
+                </div>
+            </div>
         </div>
 
-        <div class="weather-error weather-error--hidden">Город не найден, попробуйте еще раз.</div>
-    </div>
+        <div class="weather-error weather-error--hidden">Город не найден</div>
+    </div>    
     <script src="main.js"></script>
 </body>
 </html>
